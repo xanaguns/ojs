@@ -5,30 +5,35 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.jsoh.room_exam.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
-    private EditText mTodoEditText;
-    private TextView mResultTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        mTodoEditText = findViewById(R.id.todo_edit);
-        mResultTextView = findViewById(R.id.result_text);
+        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.setLifecycleOwner(this);
 
         MainViewModel viewModel = new ViewModelProvider(this).get(MainViewModel.class);
+        binding.setViewModel(viewModel);
 
         // UI 갱신
+        /*
         viewModel.getAll().observe(this, todos -> {
-            mResultTextView.setText(todos.toString());
+            binding.resultText.setText(todos.toString());
         });
+        //*/
 
+        /*
         // 버튼 클릭시 DB에 insert
         findViewById(R.id.add_button).setOnClickListener(v -> {
-            viewModel.insert(new Todo(mTodoEditText.getText().toString()));
+            viewModel.insert(binding.todoEdit.getText().toString());
         });
+        //*/
     }
 }
