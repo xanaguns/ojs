@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        // LiveData 때문에 추가되는 코드임
         binding.setLifecycleOwner(this);
 
         MainViewModel viewModel = new ViewModelProvider(this).get(MainViewModel.class);
