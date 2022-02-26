@@ -13,10 +13,16 @@
     <fragment
         android:id="@+id/jobFragment"
         android:name="com.company.android_java_background_lecture.ui.JobFragment"
-        android:label="JobFragment" />
+        android:label="JobFragment"
+        tools:layout="@layout/fragment_job" />
     <fragment
         android:id="@+id/workFragment"
         android:name="com.company.android_java_background_lecture.ui.WorkFragment"
         android:label="fragment_work"
         tools:layout="@layout/fragment_work" />
+    <fragment
+        android:id="@+id/foregroundServiceFragment"
+        android:name="com.company.android_java_background_lecture.ui.ForegroundServiceFragment"
+        android:label="fragment_foreground_service"
+        tools:layout="@layout/fragment_foreground_service" />
 </navigation>

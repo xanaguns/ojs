@@ -8,9 +8,9 @@
 
     <Button
         android:id="@+id/button_executor"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="2dp"
         android:layout_marginBottom="24dp"
         android:text="Executor"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,24 +32,35 @@
 
     <Button
         android:id="@+id/button_job"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
         android:layout_marginBottom="24dp"
         android:text="Job"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_work" />
+        app:layout_constraintStart_toEndOf="@+id/button_fgservice" />
 
     <Button
         android:id="@+id/button_work"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="2dp"
         android:layout_marginBottom="24dp"
         android:text="Work Mgr"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_job"
+        app:layout_constraintEnd_toStartOf="@+id/button_fgservice"
         app:layout_constraintStart_toEndOf="@+id/button_executor" />
+
+    <Button
+        android:id="@+id/button_fgservice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="24dp"
+        android:text="FGSvc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_job"
+        app:layout_constraintStart_toEndOf="@id/button_work" />
 </androidx.constraintlayout.widget.ConstraintLayout>
