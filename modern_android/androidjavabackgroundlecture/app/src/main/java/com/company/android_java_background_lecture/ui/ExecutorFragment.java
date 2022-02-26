@@ -37,7 +37,7 @@ public class ExecutorFragment extends Fragment {
             binding.progress.setProgress(progress);
         });
 
-        binding.button.setOnClickListener(new View.OnClickListener() {
+        binding.buttonExecutor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 viewModel.longTask();
