@@ -14,4 +14,9 @@
         android:id="@+id/jobFragment"
         android:name="com.company.android_java_background_lecture.ui.JobFragment"
         android:label="JobFragment" />
+    <fragment
+        android:id="@+id/workFragment"
+        android:name="com.company.android_java_background_lecture.ui.WorkFragment"
+        android:label="fragment_work"
+        tools:layout="@layout/fragment_work" />
 </navigation>
