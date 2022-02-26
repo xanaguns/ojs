@@ -35,7 +35,7 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        String text = SecondFragmentArgs.fromBundle(getArguments()).getVar();
+        String text = SecondFragmentArgs.fromBundle(getArguments()).getMyVar();
         TextView textView = view.findViewById(R.id.textView);
         textView.setText(text);
     }

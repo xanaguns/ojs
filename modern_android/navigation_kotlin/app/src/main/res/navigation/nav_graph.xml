@@ -2,12 +2,12 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
+    android:id="@+id/nav_graph.xml"
     app:startDestination="@id/mainFragment">
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.jsoh.navigation.MainFragment"
+        android:name="com.jsoh.navigation_kotlin.MainFragment"
         android:label="메인 화면"
         tools:layout="@layout/fragment_main">
         <action
@@ -16,11 +16,12 @@
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.jsoh.navigation.SecondFragment"
+        android:name="com.jsoh.navigation_kotlin.SecondFragment"
         android:label="두번째 화면"
         tools:layout="@layout/fragment_second" >
         <argument
             android:name="myVar"
             app:argType="string" />
     </fragment>
+
 </navigation>
