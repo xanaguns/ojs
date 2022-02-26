@@ -1,6 +1,7 @@
 package com.jsoh.room_exam_kotlin
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -18,7 +19,8 @@ class MainActivity : AppCompatActivity() {
         // LiveData 때문에 추가되는 코드임
         binding.lifecycleOwner = this
 
-        val viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        //val viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        val viewModel: MainViewModel by viewModels()
         binding.viewModel = viewModel
 
         /*

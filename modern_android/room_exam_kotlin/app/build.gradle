@@ -64,4 +64,6 @@ dependencies {
 
     // Lifecycles only (without ViewModel or LiveData)
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+
+    implementation "androidx.activity:activity-ktx:1.4.0"
 }
