@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.company.android_java_background_lecture.MainActivity;
 import com.company.android_java_background_lecture.R;
 import com.company.android_java_background_lecture.databinding.FragmentForegroundServiceBinding;
 import com.company.android_java_background_lecture.service.MyService;
@@ -31,6 +32,10 @@ public class ForegroundServiceFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        ((MainActivity)requireActivity()).mService.progressLiveData.observe(getViewLifecycleOwner(), progress -> {
+            binding.progress.setProgress(progress);
+        });
 
         binding.buttonFgserviceStart.setOnClickListener(v -> {
             ContextCompat.startForegroundService(requireContext(), new Intent(requireContext(), MyService.class));
