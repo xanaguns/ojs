@@ -5,6 +5,7 @@ public abstract class Result<T> {
 
     public static final class Success<T> extends Result<T> {
         public T data;
+        public boolean isFinished;
 
         public Success(T data) {
             this.data = data;

@@ -29,6 +29,9 @@ public class NumberRepository {
                         notifyResult(result, callback);
                         Thread.sleep(100);
                     }
+                    Result.Success<Integer> result = new Result.Success<>(num);
+                    result.isFinished = true;
+                    notifyResult(result, callback);
                 } catch (Exception e) {
                     Result<Integer> result = new Result.Error<>(e);
                     notifyResult(result, callback);
